@@ -1,11 +1,6 @@
-# set proxy
-export ALL_PROXY=socks5://127.0.0.1:1086
-
-# install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
 # install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
+wait
 
 # install spaceship
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
@@ -22,24 +17,12 @@ cp -rf .vim ~
 cp .vimrc ~
 cp .ideavimrc ~
 cp .zshrc ~
+source ~/.zshrc
 
 # install plugins of vim 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim -c 'PlugInstall' -c q
+vim +PlugInstall +qall!
 
 echo 'Install finished, restart is needed.'
-echo 'Then start installing applications.'
-
-# install applications
-brew cask install google-chrome
-brew cask install notion
-brew cask install jetbrains-toolbox
-brew cask install insomnia
-
-echo 'Applications installed, then start installing font'
-
-# install font
-brew tap homebrew/cask-fonts
-brew cask install font-jetbrains-mono
 
