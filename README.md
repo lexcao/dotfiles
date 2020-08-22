@@ -5,6 +5,7 @@ including
     * oh-my-zsh
     * oh-my-szh spaceship theme
     * vim
+    * vim airline theme
 * application
     * Google Chrome
     * Jetbrains-toolbox
@@ -14,8 +15,8 @@ including
     * Jetbrains Mono
 
 # How to 
-1. clone it
 ```
+# clone it then
 sh install.sh 
 ```
 
