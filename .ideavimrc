@@ -1,0 +1,23 @@
+" highlight the search result
+set hls
+" smart case matching
+set sc
+" ignore case matching
+set ic
+" increase seach
+set is
+
+" restore backspace
+set backspace=indent,eol,start
+
+" scroll the screen offset
+set scrolloff=10
+
+" restore system clipboard
+set clipboard=unnamed
+
+" exit key
+inoremap jk <ESC>
+
+" disable <SPACE> key
+noremap <SPACE> <NOP>
