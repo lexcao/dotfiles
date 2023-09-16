@@ -1,23 +1,48 @@
-" highlight the search result
+set idearefactormode=keep
+set ideastatusicon=gray
+set ideamarks
+set ideajoin
+
+set multiple-cursors
+
+# highlight the search result
+# then `:set nohls` to clear the highlight
 set hls
-" smart case matching
+
+# smart case matching when searching
 set sc
-" ignore case matching
+
+# ignore case matching when searching
+# when set with `smartcase`, it would not work if a keyword has both upper and lower case.
 set ic
-" increase seach
+
+# inc search
+# off, when you click Enter then begin searching
+# on, when you type a character then start searching, but Enter is required to get the results
 set is
 
-" restore backspace
 set backspace=indent,eol,start
 
-" scroll the screen offset
+# scroll the screen when cursor's offset to top or bottom line of current screen
 set scrolloff=10
 
-" restore system clipboard
-set clipboard=unnamed
+# copy to the system clipboard not registers in VIM
+set clipboard+=unnamed
+set clipboard+=ideaput
 
-" exit key
-inoremap jk <ESC>
+# Keyboard shortcuts
+inoremap <C-k> <ESC>
+vnoremap <C-k> <ESC>
 
-" disable <SPACE> key
-noremap <SPACE> <NOP>
+# IDEA specific shortcuts
+
+# expand or shirk selection
+map <Space> <Action>(EditorSelectWord)
+map <S-Space> <Action>(EditorUnSelectWord)
+
+# hows a popup with an error message and java doc in it.
+# map gh <Action>(ShowErrorDescription)
+map gh <Action>(QuickJavaDoc)
+
+# go to next error
+map <Enter> <Action>(GotoNextError)
