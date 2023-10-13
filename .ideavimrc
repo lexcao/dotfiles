@@ -46,3 +46,6 @@ map gh <Action>(QuickJavaDoc)
 
 # go to next error
 map <Enter> <Action>(GotoNextError)
+
+# go to implementation
+map gi <Action>(GotoImplementation)
