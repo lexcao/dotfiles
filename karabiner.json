@@ -5,6 +5,83 @@
             "complex_modifications": {
                 "rules": [
                     {
+    "description": "Control + ESC to backward switch tabs (in browser) and Control + Esc to move next tab",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "tab",
+                "modifiers": { "mandatory": ["left_control"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "tab_switcher_mode",
+                        "value": 1
+                    }
+                },
+                {
+                    "key_code": "tab",
+                    "modifiers": ["left_control"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": { "key_code": "left_control" },
+            "to": { "key_code": "left_control" },
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "tab_switcher_mode",
+                        "value": 0
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "tab_switcher_mode",
+                    "type": "variable_unless",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "escape",
+                "modifiers": { "mandatory": ["left_control"] }
+            },
+            "to": [
+                {
+                    "key_code": "escape",
+                    "modifiers": ["left_control"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "tab_switcher_mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "escape",
+                "modifiers": { "mandatory": ["left_control"] }
+            },
+            "to": [
+                {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": ["left_control"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+},
+                    {
                         "description": "CMD + Esc to backward switch app and CMD + Esc to move next window",
                         "manipulators": [
                             {
