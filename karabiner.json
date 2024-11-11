@@ -73,8 +73,8 @@
             },
             "to": [
                 {
-                    "key_code": "grave_accent_and_tilde",
-                    "modifiers": ["left_control"]
+                    "key_code": "tab",
+                    "modifiers": ["left_shift", "left_control"]
                 }
             ],
             "type": "basic"
