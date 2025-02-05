@@ -67,3 +67,12 @@ inoremap <C-e> <ESC>A
 nnoremap <ESC><BS> db
 inoremap <Esc><BS> <C-\><C-o>db
 
+" Alt + Right
+noremap <ESC>[1;9C $
+inoremap <ESC>[1;9C <C-\><C-o>$
+
+" Alt + Left
+noremap <ESC>[1;9D 0
+inoremap <ESC>[1;9D <C-\><C-o>0
+
+
