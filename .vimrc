@@ -54,3 +54,11 @@ set clipboard=unnamed,autoselect
 " key mapping
 inoremap jk <ESC>
 noremap <SPACE> <NOP>
+
+inoremap <C-n> <Down>
+inoremap <C-p> <Up>
+
+inoremap <C-a> <ESC>I
+noremap <C-a> <ESC>^
+noremap <C-e> <ESC>$
+inoremap <C-e> <ESC>A
