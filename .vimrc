@@ -62,3 +62,8 @@ inoremap <C-a> <ESC>I
 noremap <C-a> <ESC>^
 noremap <C-e> <ESC>$
 inoremap <C-e> <ESC>A
+
+" delete by word
+nnoremap <ESC><BS> db
+inoremap <Esc><BS> <C-\><C-o>db
+
