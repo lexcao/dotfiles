@@ -49,3 +49,13 @@ map <Enter> <Action>(GotoNextError)
 
 # go to implementation
 map gi <Action>(GotoImplementation)
+
+# navigation
+nmap <C-i> <Action>(Forward)
+nmap <C-o> <Action>(Back)
+
+# splitting
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
