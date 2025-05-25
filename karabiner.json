@@ -5,6 +5,15 @@
       "description": "Command + h to delete the whole line",
       "manipulators": [
         {
+          "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^org\\.alacritty$",
+                        "^com\\.jetbrains"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
           "from": {
             "key_code": "h",
             "modifiers": { "mandatory": ["left_command"] }
@@ -249,6 +258,15 @@
             "description": "Deletion by word",
             "manipulators": [
               {
+                "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^org\\.alacritty$",
+                        "^com\\.jetbrains"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
                 "from": {
                   "key_code": "w",
                   "modifiers": { "mandatory": ["left_control"] }
