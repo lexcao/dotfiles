@@ -212,7 +212,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["org.alacritty"],
+                    "bundle_identifiers": ["org.alacritty", "com.apple.Terminal"],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -236,7 +236,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["org.alacritty"],
+                    "bundle_identifiers": ["org.alacritty", "com.apple.Terminal"],
                     "type": "frontmost_application_unless"
                   }
                 ],
