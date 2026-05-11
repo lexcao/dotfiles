@@ -1,0 +1,119 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "cli_default_open_behavior": "new_window",
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    }
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "message_editor_min_lines": 4,
+    "use_modifier_to_send": true,
+    "enable_feedback": false,
+    "button": true,
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "api_url": "",
+      "model": ""
+    },
+    "provider": "zed"
+  },
+  "git_panel": {
+    "dock": "left",
+    "tree_view": true
+  },
+  "diff_view_style": "unified",
+  "autosave": "on_focus_change",
+  "disable_ai": false,
+  "show_edit_predictions": true,
+  "theme": "One Light",
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+    "dock": "right",
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": true,
+    "show_tab_bar_buttons": true,
+  },
+  "preview_tabs": {
+    "enabled": false,
+    // "enable_preview_from_project_panel": true,
+    // "enable_preview_from_file_finder": true,
+    // "enable_preview_from_multibuffer": true,
+    // "enable_preview_multibuffer_from_code_navigation": true,
+    // "enable_preview_file_from_code_navigation": true,
+    // "enable_keep_preview_on_code_navigation": false
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript.preferGoToSourceDefinition": true,
+        "javascript.preferGoToSourceDefinition": true,
+        "typescript": {
+          "preferGoToSourceDefinition": true,
+        },
+        "typescriptreact": {
+          "preferGoToSourceDefinition": true,
+        },
+        "javascript": {
+          "preferGoToSourceDefinition": true,
+        },
+        "javascriptreact": {
+          "preferGoToSourceDefinition": true,
+        },
+      },
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "preferGoToSourceDefinition": true,
+        },
+      },
+    },
+  },
+  "languages": {
+    "TypeScript": {
+      "show_edit_predictions": false,
+      "language_servers": ["vtsls", "!typescript-language-server", "..."],
+    },
+    "TSX": {
+      "show_edit_predictions": false,
+      "language_servers": ["vtsls", "!typescript-language-server", "..."],
+    },
+    "JavaScript": {
+      "language_servers": ["vtsls", "!typescript-language-server", "..."],
+    },
+    "JSX": {
+      "language_servers": ["vtsls", "!typescript-language-server", "..."],
+    },
+  },
+  "base_keymap": "JetBrains",
+  "buffer_font_size": 16.0,
+  "vim_mode": true,
+}
