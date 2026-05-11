@@ -1,0 +1,109 @@
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "shift shift": null,
+    },
+  },
+  {
+    "context": "AcpThread > Editor && vim_mode == insert",
+    "bindings": {
+      "shift shift": null,
+    },
+  },
+  {
+    "context": "Editor && (vim_mode == insert || vim_mode == visual) && !menu",
+    "bindings": {
+      "ctrl-k": "vim::NormalBefore",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-e": "editor::MoveToEndOfLine",
+      "ctrl-a": "editor::MoveToBeginningOfLine",
+      "ctrl-i": "pane::GoForward",
+      "ctrl-w": "editor::DeleteToPreviousWordStart",
+      "cmd--": "zed::DecreaseBufferFontSize",
+    },
+  },
+  {
+    "context": "Editor && mode == full && !menu",
+    "bindings": {
+      "ctrl-s": "pane::RevealInProjectPanel",
+      "cmd-alt-o": "editor::OpenSelectedFilename",
+    },
+  },
+  {
+    "bindings": {
+      "cmd-ctrl-o": ["projects::OpenRecent", { "create_new_window": true }],
+      "cmd-ctrl-t": "editor::ToggleTabBar",
+      "cmd-ctrl-w": "workspace::CloseWindow",
+      "cmd-ctrl-k": "git_graph::Open",
+      "cmd-shift-p": "command_palette::Toggle",
+      "cmd-j": "terminal_panel::ToggleFocus",
+      "cmd-ctrl-j": "terminal_panel::Toggle",
+      "cmd-k": "git_panel::ToggleFocus",
+      "cmd-1": "project_panel::ToggleFocus",
+      "cmd-r": "workspace::ToggleRightDock",
+      "cmd-n": "workspace::NewFile",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-1": "project_panel::Toggle",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "g d": ["workspace::SendKeystrokes", "g d escape escape"],
+      "g i": "editor::GoToImplementation",
+      "ctrl-]": "editor::GoToDefinition",
+      "g y": "editor::GoToTypeDefinition",
+      "g space": null,
+      "space space": "editor::OpenExcerpts",
+    },
+  },
+  {
+    "context": "NotebookEditor > Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "g d": ["workspace::SendKeystrokes", "g d escape escape"],
+    },
+  },
+  {
+    "context": "Editor && multibuffer && VimControl && vim_mode == normal && !menu",
+    "bindings": {
+      "ctrl-n": "editor::MoveToStartOfNextExcerpt",
+      "ctrl-p": "editor::MoveToEndOfPreviousExcerpt",
+    },
+  },
+  {
+    "context": "NotebookEditor > Editor && multibuffer && VimControl && vim_mode == normal && !menu",
+    "bindings": {
+      "ctrl-n": "editor::MoveToStartOfNextExcerpt",
+      "ctrl-p": "editor::MoveToEndOfPreviousExcerpt",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-enter": ["terminal::SendText", "\n"],
+    },
+  },
+
+  {
+    "context": "AcpThread > Editor",
+    "bindings": {
+      "alt-enter": "editor::Newline",
+    },
+  },
+  {
+    "context": "AcpThread > Editor && mode == full",
+    "bindings": {
+      "alt-enter": "editor::Newline",
+      "cmd-alt-enter": "editor::OpenExcerpts",
+    },
+  },
+]
